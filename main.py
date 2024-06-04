@@ -7,12 +7,12 @@ import numpy as np
 app = FastAPI()
 
 @app.get("/")
-async def hello():
+async def root():
     return {"Hello": "Working!"}
 
 
 @app.get("/api/{entidade}")
-async def root(entidade):
+async def predict(entidade):
 
     ai_model = pickle.load(open("../model.pkl", "rb"))
 
