@@ -7,7 +7,7 @@ import numpy as np
 app = FastAPI()
 
 @app.get("/")
-def root():
+def root(Request: request):
     return {"Hello": "Working!"}
 
 
