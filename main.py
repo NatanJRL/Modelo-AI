@@ -6,9 +6,9 @@ import numpy as np
 
 app = FastAPI()
 
-@app.get("/hello/{valor}")
-async def read(valor):
-    return {"valor": valor}
+@app.get("/")
+async def hello():
+    return {"Hello": "Working!"}
 
 
 @app.get("/api/{entidade}")
