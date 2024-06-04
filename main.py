@@ -14,7 +14,7 @@ async def root():
 @app.get("/api/{entidade}")
 async def predict(entidade):
 
-    ai_model = pickle.load(open("../model.pkl", "rb"))
+    ai_model = pickle.load(open("./model.pkl", "rb"))
 
     file = pd.read_csv("./dados.csv")
     
